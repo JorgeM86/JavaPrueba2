@@ -1,0 +1,101 @@
+
+<ion-content>
+
+  <div class="container-fluid" style="margin-top: 55px">
+    <ion-toolbar color="dark">
+      <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="index">
+        <ion-segment-button [value]="1">
+          <ion-label>Marvel</ion-label>
+        </ion-segment-button>
+        <ion-segment-button [value]="2">
+          <ion-label>DC</ion-label>
+        </ion-segment-button>
+        <ion-segment-button [value]="3">
+          <ion-label>Comunidad</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </div>
+
+  <!-- Page Content -->
+  <div class="container" style="margin-top: 30px">
+
+    <div class="row">
+
+      <!--<div class="col-lg-3">
+
+        &lt;!&ndash;<h1 class="my-4" style="text-align: center">Productos Marvel</h1>
+        <div class="list-group" *ngFor="let type of marvelList">
+          <a class="list-group-item" (click)="setProducts(type.products)">{{type?.name}}</a>
+        </div>&ndash;&gt;
+
+      </div>-->
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-12">
+        <div style="text-align: center">
+          <ion-button color="success" (click)="onCreateProduct()">Nuevo Producto</ion-button>
+        </div>
+
+        <ion-list mode="ios" style="margin-top: 10px">
+          <ion-list-header mode="ios" color="dark">
+            <ion-label>Lista de Productos</ion-label>
+          </ion-list-header>
+          <ion-item *ngFor="let x of productsList;let i=index">
+            <ion-avatar>
+              <img src="http://placehold.it/700x400">
+            </ion-avatar>
+            <ion-label style="margin-left: 10px">
+              <h3>{{x.name}}</h3>
+              <p>{{x.description}}</p>
+              <p>${{x.price}}</p>
+              <p>#{{x.quantity}}</p>
+            </ion-label>
+            <ion-icon name="create" mode="ios" color="success" (click)="onUpdateProduct(x, i)" slot="end"></ion-icon>
+            <ion-icon name="trash" color="danger" slot="end" (click)="alertDeleteProduct(x)"></ion-icon>
+          </ion-item>
+        </ion-list>
+
+        <!--<div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="https://www.sacredwall.com/wp-content/uploads/2019/04/avengers-2.jpg" alt="First slide">
+            </div>
+          </div>
+        </div>-->
+
+        <div class="row" >
+
+          <!--<div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of products">
+            <div class="card h-100" (click)="goToDetails(item)">
+              <a><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a>{{item?.name}}</a>
+                </h4>
+                <h5>${{item?.price}}</h5>
+                &lt;!&ndash;<p class="card-text">{{item.description}}</p>&ndash;&gt;
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>-->
+
+
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+
+
+</ion-content>

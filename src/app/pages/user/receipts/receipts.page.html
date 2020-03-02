@@ -1,0 +1,40 @@
+
+
+<ion-content>
+
+  <!-- Page Content -->
+  <div class="container" style="margin-top: 60px">
+
+    <div class="row">
+
+      <!-- /.col-lg-3 -->
+      <div class="col-lg-12">
+
+        <ion-list mode="ios" style="margin-top: 10px">
+          <ion-list-header mode="ios" color="dark">
+            <ion-label>Lista de Compras</ion-label>
+          </ion-list-header>
+          <ion-item *ngFor="let x of userInfo?.receipts;let i=index">
+            <ion-avatar>
+              <img src="http://placehold.it/700x400">
+            </ion-avatar>
+            <ion-label style="margin-left: 10px">
+              <h3>{{x?.product.name}} x({{x?.totalQuantity}})</h3>
+              <p>Precio Total: ${{x?.totalPrice}}</p>
+              <p>Cantidad Total #{{x?.totalQuantity}}</p>
+              <p>Fecha de Compra: {{x?.date | date}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+</ion-content>

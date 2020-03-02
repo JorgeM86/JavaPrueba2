@@ -1,0 +1,78 @@
+ion-content {
+  --background:  url(https://miro.medium.com/max/1200/0*8PhN36R1SL9i5u_t.jpeg) no-repeat center center / cover;
+}
+label {
+  color: white;
+}
+
+.content {
+  margin-top: 2rem;
+  padding: 0 .5rem;
+}
+
+.new-pro {
+  text-align: center;
+}
+
+.wizard1 {
+  border: 1px solid #44E4AD;
+  border-radius: 10px;
+  position: relative;
+  background: rgba(255, 255, 255, 1);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.wizard2 {
+  margin: 0 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: #222428 center;
+}
+
+.p-container {
+  margin: 0 0 10px;
+  padding: 3.5px;
+  border-radius: 4px;
+  color: #6d6d6d;
+  border: 1px #6d6d6d;
+  background-color: #e9ecef;
+}
+
+.btnEdit44 {
+  width: 130px;
+  background: #44E4AD;
+  box-shadow: 0px 0px 6px 0px #44E4AD;
+  border-radius: 9px;
+}
+
+.btnEdit44:hover{
+  background-color: #007df6 !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.btnDelete44 {
+  width: 130px;
+  background: #FF0D48;
+  box-shadow: 0px 0px 6px 0px #FF0D48;
+  border-radius: 9px;
+}
+
+.btnDelete44:hover{
+  background-color: #44E4AD !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.btn, .btn-large, .btn-small, .btn-flat {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}

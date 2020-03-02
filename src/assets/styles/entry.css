@@ -1,0 +1,152 @@
+.sign-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    /*background: rgba(17,24,34,.5) center;*/
+    background: rgba(17,24,34, 1) center;
+}
+
+.sign-container h2 {
+    margin: 0;
+    padding: 30px 0 40px;
+    color: rgb(116,235,213);
+    text-align: center;
+}
+
+.sign-container input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*.sign-in-container form input[type="email"], .sign-in-container form input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    !*background: transparent;*!
+    !*border: 1px solid #fff;*!
+}*/
+
+.sign-container a {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sign-submit {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    display: block;
+    padding: 12px 40px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgba(17,24,34,.3);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0,0,0,.5);
+}
+
+.sign-submit:hover {
+    background: rgb(94, 174, 152) center;
+}
+
+/*.sign-up-container h2 {
+    margin: 0;
+    padding: 30px 0 40px;
+    color: #007df6;;
+    text-align: center;
+}*/
+
+.sign-container input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sign-container form input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+}
+
+.sign-container select {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    /*color: rgba(17,24,34,.5);*/
+    /*color: #ffffff;*/
+    background-color: transparent;
+}
+
+.form-genero {
+    color: #ffffff;
+}
+
+.form-pass {
+    position: relative;
+}
+
+/*.form-pass input {
+    color: #0d0d0d;
+}*/
+
+.form-pass i{
+    position: absolute;
+    top: 10px;
+    color: #ffffff;
+    /*color: rgba(17,24,34,.5);*/
+    right: 13px;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+@media screen and (max-width: 988px) {
+    .sign-container {
+        width: 350px;
+        /*height: 560px;*/
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .sign-container {
+        width: 350px;
+        /*height: 560px;*/
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .sign-container {
+        right: 10px;
+        width: 320px;
+        /*height: 560px;*/
+    }
+}

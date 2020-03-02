@@ -1,0 +1,88 @@
+<ion-header mode="ios">
+  <ion-toolbar color="dark">
+    <ion-title>{{mode}} Producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="onCloseModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="container" style="margin-top: 30px">
+    <div class="wizard2">
+      <br>
+      <div class="content">
+        <form [formGroup]="productFormGroup">
+          <div class="form-group row" style="margin-top: 15px">
+            <label class="col-form-label col-sm-2 text-sm-right">Producto</label>
+            <div class="col-sm-9">
+              <input class="form-control" type="text" placeholder="Nombre" formControlName="name"
+                     [ngClass]="{ 'is-invalid': submitted && f1?.name?.errors }">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-form-label col-sm-2 text-sm-right">Descripcion</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" placeholder="Descripcion" formControlName="description"
+                        [ngClass]="{ 'is-invalid': submitted && f1?.description?.errors }"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-form-label col-sm-2 text-sm-right">Precio</label>
+            <div class="col-sm-9">
+              <input class="form-control" type="text" placeholder="{{value?.price}}" formControlName="price"
+                     [ngClass]="{ 'is-invalid': submitted && f1?.price?.errors }">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-form-label col-sm-2">Cantidad</label>
+            <div class="col-sm-9">
+              <input class="form-control" type="number" formControlName="quantity" placeholder="Cantidad a comprar"
+                     min="1" [ngClass]="{ 'is-invalid': submitted && f1?.quantity?.errors }">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-form-label col-sm-2 text-sm-right">Categoria *</label>
+            <div class="col-sm-9">
+              <select class="form-control" formControlName="category_fk"
+                      [ngClass]="{ 'is-invalid': submitted && f1?.category_fk?.errors }">
+                <option value="" class="option" disabled>Selecciona una Categoria</option>
+                <option *ngFor="let co of categoriesList;" [value]="co.categoryID" class="option">{{co.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-form-label col-sm-2 text-sm-right">Tipo *</label>
+            <div class="col-sm-9">
+              <select class="form-control" formControlName="type_fk"
+                      [ngClass]="{ 'is-invalid': submitted && f1?.type_fk?.errors }">
+                <option value="" class="option" disabled>Selecciona un Tipo</option>
+                <option *ngFor="let co of typesList;" [value]="co.typeID" class="option">{{co.name}}</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <br>
+        <ion-row class="ion-text-center" style="margin-bottom: 15px">
+          <ion-col class="ion-text-wrap">
+            <a class="waves-effect waves-light btn-small btnDelete44" (click)="onCloseModal()"
+               style="color: white">CANCELAR</a>
+          </ion-col>
+          <ion-col class="ion-text-wrap" *ngIf="mode === 'Nuevo'">
+            <a class="waves-effect waves-light btn-small btnEdit44" (click)="onCreateProduct()"
+               style="color: white">CREAR</a>
+          </ion-col>
+          <ion-col class="ion-text-wrap" *ngIf="mode === 'Editar'">
+            <a class="waves-effect waves-light btn-small btnEdit44" (click)="onCreateProduct()"
+               style="color: white">GUARDAR</a>
+          </ion-col>
+        </ion-row>
+      </div>
+      <br>
+    </div>
+  </div>
+
+</ion-content>
